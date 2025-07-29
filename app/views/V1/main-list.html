@@ -1,0 +1,465 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Overseas users backlog" %}
+
+{% block beforeContent %}
+  {% include "/includes/back-link.html" %}
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+
+    <div class="govuk-notification-banner govuk-visually-hidden" id="no-record-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+     No record found
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <p class="govuk-notification-banner__heading">
+     Some help text, check your spelling etc?
+    </p>
+  </div>
+</div>
+
+
+    <span class="govuk-caption-l"><span class="govuk-!-font-weight-bold">84,231</span> results</span>
+
+
+
+{% set emailHtml %}
+{{ govukInput({
+  id: "email",
+  name: "email",
+  type: "email",
+  autocomplete: "email",
+  spellcheck: false,
+  classes: "govuk-!-width-one-half",
+  label: {
+    text: "Enter email address"
+  }
+}) }}
+{% endset -%}
+
+{% set caseHtml %}
+{{ govukInput({
+  id: "caseID",
+  name: "caseID",
+  classes: "govuk-!-width-one-third",
+  label: {
+    text: "Enter case ID, for example AR123456"
+  }
+}) }}
+{% endset -%}
+
+
+{{ govukRadios({
+  name: "search",
+  fieldset: {
+    legend: {
+      text: "Search for a record",
+      isPageHeading: false,
+      classes: "govuk-fieldset__legend--l"
+    }
+  },
+  items: [
+    {
+      value: "email",
+      text: "Email address",
+      conditional: {
+        html: emailHtml
+      }
+    },
+    {
+      value: "id",
+      text: "Case ID",
+      conditional: {
+        html: caseHtml
+      }
+    }
+  ]
+}) }}
+
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Search"
+  }) }}
+
+  <a class="govuk-link" href="JAVASCRIPT:VOID(0)">Clear search</a>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+
+{{ govukDetails({
+  summaryText: "Order of these records",
+  text: "These records are in order of most recent confirmation statement date, and then the date the user was added to the backlog. If you want to find the record of someone who is no longer in the backlog, search for them by their email address or case reference number."
+}) }}
+
+
+
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  -->
+
+
+
+<table class="govuk-table govuk-table--small-text-until-tablet">
+  <caption class="govuk-visually-hidden">Overseas users backlog</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Case ID</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Due date of next confirmation statement</th>
+      <th scope="col" class="govuk-table__header">Company number</th>
+      <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Date added to backlog</th>
+      <th scope="col" class="govuk-table__header">Status</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR123456</a></th>
+      <td class="govuk-table__cell">20 November 2025</td>
+      <td class="govuk-table__cell">01234567</td>
+      <td class="govuk-table__cell">18 November 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR105367</a></th>
+      <td class="govuk-table__cell">25 October 2025</td>
+      <td class="govuk-table__cell">00447001</td>
+      <td class="govuk-table__cell">27 August 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR115941</a></th>
+      <td class="govuk-table__cell">8 September 2025</td>
+      <td class="govuk-table__cell">02289453</td>
+      <td class="govuk-table__cell">1 November 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR110765</a></th>
+      <td class="govuk-table__cell">31 October 2025</td>
+      <td class="govuk-table__cell">03034424</td>
+      <td class="govuk-table__cell">31 October 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR100133</a></th>
+      <td class="govuk-table__cell">21 September 2025</td>
+      <td class="govuk-table__cell">01664400</td>
+      <td class="govuk-table__cell">22 October 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR108030</a></th>
+      <td class="govuk-table__cell">28 September 2025</td>
+      <td class="govuk-table__cell">02935895</td>
+      <td class="govuk-table__cell">26 October 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR107996</a></th>
+      <td class="govuk-table__cell">16 September 2025</td>
+      <td class="govuk-table__cell">00204937</td>
+      <td class="govuk-table__cell">7 October 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR103014</a></th>
+      <td class="govuk-table__cell">13 November 2025</td>
+      <td class="govuk-table__cell">03035835</td>
+      <td class="govuk-table__cell">20 August 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR106737</a></th>
+      <td class="govuk-table__cell">13 October 2025</td>
+      <td class="govuk-table__cell">01291227</td>
+      <td class="govuk-table__cell">18 September 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR118243</a></th>
+      <td class="govuk-table__cell">11 November 2025</td>
+      <td class="govuk-table__cell">02790526</td>
+      <td class="govuk-table__cell">13 September 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR119130</a></th>
+      <td class="govuk-table__cell">21 October 2025</td>
+      <td class="govuk-table__cell">02880535</td>
+      <td class="govuk-table__cell">23 September 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR103520</a></th>
+      <td class="govuk-table__cell">28 August 2025</td>
+      <td class="govuk-table__cell">00144541</td>
+      <td class="govuk-table__cell">5 September 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR112138</a></th>
+      <td class="govuk-table__cell">22 October 2025</td>
+      <td class="govuk-table__cell">02176369</td>
+      <td class="govuk-table__cell">21 October 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR100835</a></th>
+      <td class="govuk-table__cell">26 September 2025</td>
+      <td class="govuk-table__cell">02222538</td>
+      <td class="govuk-table__cell">22 October 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR105397</a></th>
+      <td class="govuk-table__cell">26 August 2025</td>
+      <td class="govuk-table__cell">02549702</td>
+      <td class="govuk-table__cell">27 August 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR108650</a></th>
+      <td class="govuk-table__cell">28 September 2025</td>
+      <td class="govuk-table__cell">02248479</td>
+      <td class="govuk-table__cell">26 August 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR107642</a></th>
+      <td class="govuk-table__cell">11 September 2025</td>
+      <td class="govuk-table__cell">03171290</td>
+      <td class="govuk-table__cell">20 September 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR115556</a></th>
+      <td class="govuk-table__cell">23 October 2025</td>
+      <td class="govuk-table__cell">01643173</td>
+      <td class="govuk-table__cell">15 October 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR103230</a></th>
+      <td class="govuk-table__cell">10 October 2025</td>
+      <td class="govuk-table__cell">00318148</td>
+      <td class="govuk-table__cell">25 September 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR119519</a></th>
+      <td class="govuk-table__cell">15 September 2025</td>
+      <td class="govuk-table__cell">03216519</td>
+      <td class="govuk-table__cell">15 November 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR109883</a></th>
+      <td class="govuk-table__cell">15 November 2025</td>
+      <td class="govuk-table__cell">03360357</td>
+      <td class="govuk-table__cell">3 November 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR115213</a></th>
+      <td class="govuk-table__cell">6 October 2025</td>
+      <td class="govuk-table__cell">00613464</td>
+      <td class="govuk-table__cell">12 November 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR113414</a></th>
+      <td class="govuk-table__cell">26 August 2025</td>
+      <td class="govuk-table__cell">01135038</td>
+      <td class="govuk-table__cell">20 August 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR107507</a></th>
+      <td class="govuk-table__cell">8 November 2025</td>
+      <td class="govuk-table__cell">03099735</td>
+      <td class="govuk-table__cell">5 November 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR118128</a></th>
+      <td class="govuk-table__cell">5 October 2025</td>
+      <td class="govuk-table__cell">01527824</td>
+      <td class="govuk-table__cell">15 October 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR116861</a></th>
+      <td class="govuk-table__cell">18 September 2025</td>
+      <td class="govuk-table__cell">03288396</td>
+      <td class="govuk-table__cell">13 November 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR113913</a></th>
+      <td class="govuk-table__cell">8 November 2025</td>
+      <td class="govuk-table__cell">02240436</td>
+      <td class="govuk-table__cell">2 September 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR110483</a></th>
+      <td class="govuk-table__cell">10 November 2025</td>
+      <td class="govuk-table__cell">02531043</td>
+      <td class="govuk-table__cell">26 October 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR122517</a></th>
+      <td class="govuk-table__cell">17 September 2025</td>
+      <td class="govuk-table__cell">02807395</td>
+      <td class="govuk-table__cell">13 September 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR102875</a></th>
+      <td class="govuk-table__cell">11 September 2025</td>
+      <td class="govuk-table__cell">01108963</td>
+      <td class="govuk-table__cell">10 November 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR112170</a></th>
+      <td class="govuk-table__cell">28 September 2025</td>
+      <td class="govuk-table__cell">01984057</td>
+      <td class="govuk-table__cell">12 October 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR113478</a></th>
+      <td class="govuk-table__cell">11 October 2025</td>
+      <td class="govuk-table__cell">01106785</td>
+      <td class="govuk-table__cell">25 September 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR121839</a></th>
+      <td class="govuk-table__cell">26 October 2025</td>
+      <td class="govuk-table__cell">01504388</td>
+      <td class="govuk-table__cell">30 August 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR106292</a></th>
+      <td class="govuk-table__cell">30 October 2025</td>
+      <td class="govuk-table__cell">01590547</td>
+      <td class="govuk-table__cell">20 October 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR105999</a></th>
+      <td class="govuk-table__cell">2 October 2025</td>
+      <td class="govuk-table__cell">03335406</td>
+      <td class="govuk-table__cell">4 September 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR114592</a></th>
+      <td class="govuk-table__cell">5 November 2025</td>
+      <td class="govuk-table__cell">02112133</td>
+      <td class="govuk-table__cell">21 October 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR108071</a></th>
+      <td class="govuk-table__cell">30 August 2025</td>
+      <td class="govuk-table__cell">01217691</td>
+      <td class="govuk-table__cell">29 August 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR101981</a></th>
+      <td class="govuk-table__cell">18 November 2025</td>
+      <td class="govuk-table__cell">02884462</td>
+      <td class="govuk-table__cell">22 August 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR112190</a></th>
+      <td class="govuk-table__cell">23 October 2025</td>
+      <td class="govuk-table__cell">02106893</td>
+      <td class="govuk-table__cell">11 September 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+<tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="user-record"  class="govuk-link govuk-link--no-visited-state">AR104276</a></th>
+      <td class="govuk-table__cell">27 August 2025</td>
+      <td class="govuk-table__cell">00312341</td>
+      <td class="govuk-table__cell">16 November 2025</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">Backlog</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+{% from "govuk/components/pagination/macro.njk" import govukPagination %}
+
+{{ govukPagination({
+  previous: {
+    href: "JAVASCRIPT:VOID(0)"
+  },
+  next: {
+    href: "JAVASCRIPT:VOID(0)"
+  },
+  items: [
+    {
+      number: 1,
+      href: "JAVASCRIPT:VOID(0)"
+    },
+    {
+      number: 2,
+      current: true,
+      href: "JAVASCRIPT:VOID(0)"
+    },
+    {
+      number: 3,
+      href: "JAVASCRIPT:VOID(0)"
+    }
+  ]
+}) }}
+
+
+
+
+  <div class="ur-shortcuts">
+      <!-- Not part of ACTUAL screen: only for UR purposes -->
+      <p class="govuk-body-s govuk-!-margin-bottom-1">UR shortcut:</p>
+        {{ govukCheckboxes({
+          name: "toggle",
+          fieldset: {
+            legend: {
+              text: "Toggle no record found",
+              classes: "govuk-visually-hidden"
+            }
+          },
+          items: [
+            {
+              value: "toggle",
+              text: "Toggle 'no record found'"
+            }
+          ]
+        }) }}
+  </div>
+
+  </div>
+</div>
+
+
+<script src="/public/javascripts/toggle-no-record-found.js"></script>
+
+
+{% endblock %}

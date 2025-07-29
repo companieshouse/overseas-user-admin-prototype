@@ -1,5 +1,5 @@
 {
-  "serviceName": "Service name goes here",
+  "serviceName": "Overseas users backlog prototype",
   "plugins": {
     "govuk-frontend": {
       "rebrand": true

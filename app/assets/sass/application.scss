@@ -4,3 +4,11 @@
 // 
 
 // Add extra styles here
+
+.ur-shortcuts {
+  margin-top: 6em;
+  p, ul, li, a, .govuk-label {
+    color: #b1b4b6  !important;
+    font-size: 19px !important;
+  }
+}
