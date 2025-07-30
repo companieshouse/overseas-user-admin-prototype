@@ -93,11 +93,41 @@
 </div>
 
 
-<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"> 
 
-
+<div class="govuk-grid-row">
+<div class="govuk-grid-column-two-thirds">
 <p class="govuk-body-l">
   84,231 records</p>
+</div>
+<div class="govuk-grid-column-one-third">
+  {{ govukSelect({
+  id: "display",
+  name: "display",
+  label: {
+    text: "Display"
+  },
+  items: [
+    {
+      value: "fiveRecords",
+      text: "5 records per page"
+    },
+    {
+      value: "tenRecords",
+      text: "10 records per page",
+      selected: true
+    },
+    {
+      value: "twentyRecords",
+      text: "20 records per page"
+    }
+  ]
+}) }}
+
+</div>
+</div>
+
+
 
 {{ govukDetails({
   summaryText: "Order of these records",
