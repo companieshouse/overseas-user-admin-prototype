@@ -42,7 +42,8 @@
   classes: "govuk-!-width-one-half",
   label: {
     text: "Enter email address"
-  }
+  },
+  value: "example@email.com"
 }) }}
 {% endset -%}
 
@@ -73,18 +74,19 @@
       text: "Email address",
       conditional: {
         html: emailHtml
-      }
+      },
+      checked: true
+      
     },
     {
       value: "id",
-      text: "Case ID",
+      text: "Case reference number",
       conditional: {
         html: caseHtml
       }
     }
   ]
 }) }}
-
 <div class="govuk-button-group">
   {{ govukButton({
     text: "Search"
