@@ -2,7 +2,7 @@
   "serviceName": "Overseas identity verification (IDV) backlog prototype",
   "plugins": {
     "govuk-frontend": {
-      "rebrand": true
+      "rebrand": false
     }
   }
 }
