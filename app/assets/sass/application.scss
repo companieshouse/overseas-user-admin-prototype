@@ -13,10 +13,16 @@
   }
 }
 
-.my-full-width-table {
-  width: 100vw;
-  margin-left: 0;
-  margin-right: 0;
-  padding-left: 0;
-  padding-right: 0;
+
+.ch-main-full-width {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 99vw;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+  overflow-x: hidden;
+
 }
