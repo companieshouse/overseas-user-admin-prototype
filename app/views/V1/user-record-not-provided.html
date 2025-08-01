@@ -1,0 +1,118 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="AR123456" %}
+
+{% block beforeContent %}
+  {% include "/includes/back-link.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+
+    <p class="govuk-body">FOR INFO: This page is to show how a user record could appear with optional info not provided.
+      Some user records could show a mix of provided and not provided information. A user could answer 'Yes' to 'Are you a director?' but be unable to provide the other optional infor if they are waiting to incorporate a company.</p>
+
+
+
+    <div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h1 class="govuk-summary-card__title govuk-!-font-size-36">
+      AR123456
+    </h1>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+         user@email.com
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Due date of next confirmation statement
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Not provided
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Company number
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Not provided
+        </dd>
+      </div>
+       <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Director
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes
+        </dd>
+      </div>
+       <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Number of appointments
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Not provided
+        </dd>
+      </div>
+       <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Nationality
+        </dt>
+        <dd class="govuk-summary-list__value">
+         <ul class="govuk-list">
+            <li>Indian</li>
+            <li>Argentinian</li>
+          </ul>
+        </dd>
+      </div>
+       <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Date added to backlog
+        </dt>
+        <dd class="govuk-summary-list__value">
+        18 November 2025
+        </dd>
+      </div>
+       <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+           <label for="status">
+              Status
+            </label>
+        </dt>
+        <dd class="govuk-summary-list__value govuk-form-group">
+            <select class="govuk-select" id="status" name="status">
+              <option value="backlog" selected>Backlog</option>
+              <option value="progresss">In progress</option>
+              <option value="failed">Verification failed</option>
+              <option value="verified">Verified</option>
+            </select>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+
+<div class="govuk-button-group">
+  {{ govukButton({
+    text: "Update and return",
+    href: "main-list"
+  }) }}
+
+  <a class="govuk-link" href="main-list">Cancel and return</a>
+</div>
+
+
+  </div>
+</div>
+
+{% endblock %}
