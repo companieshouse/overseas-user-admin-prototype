@@ -11,22 +11,7 @@
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
 
-
-    <div class="govuk-notification-banner govuk-visually-hidden" id="no-record-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-  <div class="govuk-notification-banner__header">
-    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-     No record found
-    </h2>
-  </div>
-  <div class="govuk-notification-banner__content">
-    <p class="govuk-notification-banner__heading">
-     There are no user records that match your search. Try searching again using a different email address or case reference number.
-    </p>
-  </div>
-</div>
 
 
     
@@ -92,16 +77,32 @@
   }) }}
 
   <a class="govuk-link" href="JAVASCRIPT:VOID(0)">Clear search</a>
+  
 </div>
+
+<h2 class="govuk-heading-s">84,231 records</h2>
 
 
 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"> 
 
+
+
+
+
 <div class="govuk-grid-row">
-<div class="govuk-grid-column-two-thirds">
-<p class="govuk-body-l">
-  84,231 records</p>
+<div class="govuk-grid-column-two-thirds-from-desktop">
+  <details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      How the records are ordered
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    These records are in order of most recent confirmation statement date, and then the date the user was added to the backlog. <br><br>If you want to find the record of someone who does not have a status of 'backlog', search for them by their email address or case reference number.
+  </div>
+</details>
 </div>
+
 <div class="govuk-grid-column-one-third">
   {{ govukSelect({
   id: "display",
@@ -129,16 +130,7 @@
 </div>
 </div>
 
-<details class="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      How the records are ordered
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-    These records are in order of most recent confirmation statement date, and then the date the user was added to the backlog. <br><br>If you want to find the record of someone who does not have a status of 'backlog', search for them by their email address or case reference number.
-  </div>
-</details>
+
 
 
 
