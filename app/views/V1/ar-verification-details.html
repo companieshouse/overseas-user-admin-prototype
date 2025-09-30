@@ -2,16 +2,19 @@
 
 {# {% set pageName="V1" %} #}
 
-
 {% block content %}
 
-
+<div class="govuk-grid-column-two-thirds">
+    
+<a href="#" class="govuk-back-link">Back</a>
 
 
 <div class="govuk-form-group">
-    <div class="govuk-grid-column-two-thirds">
+   
     <h1 class="govuk-heading-xl">Enter identity verification record details</h1>
   </div>
+
+</div>
   
   <div>
   <dl class="govuk-summary-list govuk-!-margin-bottom-5">
@@ -46,13 +49,14 @@
    <div class="govuk-grid-column-two-thirds">
    <div class="govuk-form-group">
     <label class="govuk-label" for="sort">
-    <strong>Validation method</strong>  
+    <strong>Verification method</strong>  
     </label>
     <select class="govuk-select" id="sort" name="sort">
-      <option value="published">Internal</option>
-      <option value="updated" selected>Internal</option>
-      <option value="views">Medium</option>
-      <option value="comments">Medium</option>
+        <option value="updated" selected></option>
+        <option value="published">Internal</option>
+     
+      <option value="published">External</option>
+     
     </select>
   </div>
   
@@ -213,11 +217,16 @@
       <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="addressCounty" type="text">
     </div>
     <div class="govuk-form-group">
-      <label class="govuk-label" for="address-county">
-        Country
-      </label>
-      <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="addressCounty" type="text">
-    </div>
+        <label class="govuk-label" for="sort">
+      Country
+        </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published"></option>
+          <option value="updated" selected></option>
+          <option value="views">United Kingdom</option>
+          <option value="comments">United Kingdom</option>
+        </select>
+      </div>
     <div class="govuk-form-group">
       <label class="govuk-label" for="address-postcode">
         Postcode / zip code (if provided)
@@ -226,53 +235,9 @@
     </div>
   </fieldset>
   
-  <div class="govuk-!-padding-bottom-9"></div>
+  <div class="govuk-!-padding-bottom-5"></div>
   
-    
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-      <h1 class="govuk-fieldset__heading">
-       Former address (if provided)
-      </h1>
-    </legend>
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="address-line-1">
-        Address line 1
-      </label>
-      <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
-    </div>
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="address-line-1">
-        Address line 2 (if provided)
-      </label>
-      <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
-    </div>
-  
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="address-town">
-        Town or city (if provided)
-      </label>
-      <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2">
-    </div>
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="address-county">
-        Region (if provided)
-      </label>
-      <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="addressCounty" type="text">
-    </div>
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="address-county">
-        Country
-      </label>
-      <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="addressCounty" type="text">
-    </div>
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="address-postcode">
-        Postcode / zip code (if provided)
-      </label>
-      <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
-    </div>
-  </fieldset>
+   
   
   <div>
   
@@ -300,9 +265,25 @@
     </label>
     <select class="govuk-select" id="sort" name="sort">
       <option value="published"></option>
-      <option value="updated" selected>Passport</option>
+      <option value="updated" selected></option>
       <option value="views">Passport</option>
-      <option value="comments">Passport</option>
+      <option value="comments">National identity card</option>
+      <option value="comments">Driving licence</option>
+      <option value="comments">Utility bill</option>
+      <option value="comments">Rental agreement</option>
+      <option value="comments">Mortgage statement</option>
+      <option value="comments">Bank or building society statement</option>
+    
+      <option value="comments">Insurance poicy</option>
+      <option value="comments">Birth or adoption certificate</option>
+      <option value="comments">Marriage or civil partnership certificate</option>
+     
+      <option value="comments">Immigration document</option>
+      <option value="comments">Health record</option>
+      
+      <option value="comments">Education record</option>
+      <option value="comments">Employment record</option>
+      <option value="comments">Other</option>
     </select>
   </div>
   
@@ -355,7 +336,7 @@
     </label>
     <select class="govuk-select" id="sort" name="sort">
       <option value="published"></option>
-      <option value="updated" selected>United Kingdom</option>
+      <option value="updated" selected></option>
       <option value="views">United Kingdom</option>
       <option value="comments">United Kingdom</option>
     </select>
@@ -378,9 +359,25 @@
     </label>
     <select class="govuk-select" id="sort" name="sort">
       <option value="published"></option>
-      <option value="updated" selected>Passport</option>
+      <option value="updated" selected></option>
       <option value="views">Passport</option>
-      <option value="comments">Passport</option>
+      <option value="comments">National identity card</option>
+      <option value="comments">Driving licence</option>
+      <option value="comments">Utility bill</option>
+      <option value="comments">Rental agreement</option>
+      <option value="comments">Mortgage statement</option>
+      <option value="comments">Bank or building society statement</option>
+    
+      <option value="comments">Insurance poicy</option>
+      <option value="comments">Birth or adoption certificate</option>
+      <option value="comments">Marriage or civil partnership certificate</option>
+     
+      <option value="comments">Immigration document</option>
+      <option value="comments">Health record</option>
+      
+      <option value="comments">Education record</option>
+      <option value="comments">Employment record</option>
+      <option value="comments">Other</option>
     </select>
   </div>
   
@@ -433,7 +430,7 @@
     </label>
     <select class="govuk-select" id="sort" name="sort">
       <option value="published"></option>
-      <option value="updated" selected>United Kingdom</option>
+      <option value="updated" selected></option>
       <option value="views">United Kingdom</option>
       <option value="comments">United Kingdom</option>
     </select>
@@ -457,9 +454,25 @@
     </label>
     <select class="govuk-select" id="sort" name="sort">
       <option value="published"></option>
-      <option value="updated" selected>Passport</option>
+      <option value="updated" selected></option>
       <option value="views">Passport</option>
-      <option value="comments">Passport</option>
+      <option value="comments">National identity card</option>
+      <option value="comments">Driving licence</option>
+      <option value="comments">Utility bill</option>
+      <option value="comments">Rental agreement</option>
+      <option value="comments">Mortgage statement</option>
+      <option value="comments">Bank or building society statement</option>
+    
+      <option value="comments">Insurance poicy</option>
+      <option value="comments">Birth or adoption certificate</option>
+      <option value="comments">Marriage or civil partnership certificate</option>
+     
+      <option value="comments">Immigration document</option>
+      <option value="comments">Health record</option>
+      
+      <option value="comments">Education record</option>
+      <option value="comments">Employment record</option>
+      <option value="comments">Other</option>
     </select>
   </div>
   
@@ -512,7 +525,7 @@
     </label>
     <select class="govuk-select" id="sort" name="sort">
       <option value="published"></option>
-      <option value="updated" selected>United Kingdom</option>
+      <option value="updated" selected></option>
       <option value="views">United Kingdom</option>
       <option value="comments">United Kingdom</option>
     </select>
