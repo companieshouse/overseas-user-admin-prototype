@@ -3,74 +3,75 @@
 {# {% set pageName="V1" %} #}
 
 {% block content %}
-<a href="#" class="govuk-back-link">Back to dashboard</a>
 
 
-<div class="govuk-error-summary" data-module="govuk-error-summary">
+<div class="govuk-width-container">
+    <a href="#" class="govuk-back-link">Back to dashboard</a>
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <form action="/form-handler" method="post" novalidate>
+
+            <div class="govuk-error-summary" data-module="govuk-error-summary">
     
 
     
-    <div role="alert">
-      <h2 class="govuk-error-summary__title">
-        There is a problem
-      </h2>
-      <div class="govuk-error-summary__body">
-        <ul class="govuk-list govuk-error-summary__list">
-          <li>
-            <a href="#full-name-input">Email address does not match any on record</a>
-          </li>
-          <li>
-            <a href="#full-name-input">Case reference number does not match any on record</a>
-          </li>
-        </ul>
+                <div role="alert">
+                  <h2 class="govuk-error-summary__title">
+                    There is a problem
+                  </h2>
+                  <div class="govuk-error-summary__body">
+                    <ul class="govuk-list govuk-error-summary__list">
+                      <li>
+                        <a href="#full-name-input">Email address does not match any on record</a>
+                      </li>
+                      <li>
+                        <a href="#full-name-input">Case reference number does not match any on record</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <h1 class="govuk-heading-l">Create verification record</h1>
+              <div class="govuk-form-group govuk-form-group--error">
+                <label class="govuk-label" for="full-name-input">
+                  Customer Email address
+                </label>
+                <p id="full-name-input-error" class="govuk-error-message">
+                  <span class="govuk-visually-hidden">Error:</span> Email address does not match any on record
+                </p>
+                <input class="govuk-input govuk-input--error govuk-!-width-two-thirds" id="full-name-input" name="name" type="text" aria-describedby="full-name-input-error" autocomplete="name">
+                
+                <div class="govuk-!-padding-bottom-4"></div>
+                <label class="govuk-label" for="width-10">
+                  Case reference number
+                </label>
+                <p id="full-name-input-error" class="govuk-error-message">
+                  <span class="govuk-visually-hidden">Error:</span> Case reference number does not match any on record
+                </p>
+                <input class="govuk-input govuk-input--width-10 govuk-input--error" id="width-10" name="width10" type="text" aria-describedby="full-name-input-error" autocomplete="name">
+              
+            </div>
+                <div class="govuk-!-padding-bottom-3"></div>
+                <div class="govuk-button-group">
+                  <button type="submit" class="govuk-button" data-module="govuk-button">
+                    Continue
+                  </button>
+                  <a class="govuk-link" href="#">Cancel</a>
+                </div>
+              </div>
+            </div>    
+               
+              
+          </form>
+        </div>
       </div>
-    </div>
+    </main>
   </div>
-  <h1 class="govuk-heading-l">Create verification record</h1>
-  <div class="govuk-form-group govuk-form-group--error">
-    <label class="govuk-label" for="full-name-input">
-      Customer Email address
-    </label>
-    <p id="full-name-input-error" class="govuk-error-message">
-      <span class="govuk-visually-hidden">Error:</span> Email address does not match any on record
-    </p>
-    <input class="govuk-input govuk-input--error govuk-!-width-two-thirds" id="full-name-input" name="name" type="text" aria-describedby="full-name-input-error" autocomplete="name">
-    
-    <div class="govuk-!-padding-bottom-4"></div>
-    <label class="govuk-label" for="width-10">
-      Case reference number
-    </label>
-    <p id="full-name-input-error" class="govuk-error-message">
-      <span class="govuk-visually-hidden">Error:</span> Case reference number does not match any on record
-    </p>
-    <input class="govuk-input govuk-input--width-10 govuk-input--error" id="width-10" name="width10" type="text" aria-describedby="full-name-input-error" autocomplete="name">
-  
-    
-    
-   
-  </div>
-  
-  <div class="govuk-grid-row">
-      <div class="govuk-grid-column-full">
-  
-     
-    
-  
-      <div class="govuk-form-group">
-  
-      
-      </div>
-  
-     
-      </form>
-  
-      <div class="govuk-!-padding-bottom-3"></div>
-      <div class="govuk-button-group">
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Continue
-        </button>
-        <a class="govuk-link" href="#">Cancel</a>
-      </div>
-    </div>
-  </div>
+
+
+
+
+
 {% endblock %}
