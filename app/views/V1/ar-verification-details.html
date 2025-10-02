@@ -6,7 +6,7 @@
 
 
     
-<a href="#" class="govuk-back-link">Back</a>
+<a href="ar-verification-search.html" class="govuk-back-link">Back</a>
 
 
 <div class="govuk-form-group">
@@ -52,10 +52,11 @@
     </label>
     <select class="govuk-select" id="sort" name="sort">
         <option value="updated" selected></option>
+        <option value="published">External</option>
+     
         <option value="published">Internal</option>
      
-      <option value="published">External</option>
-     
+      
     </select>
   </div>
   
@@ -541,13 +542,15 @@ Date verification completed
   
   <div class="govuk-!-padding-bottom-2"></div>
   
+      
       <div class="govuk-button-group">
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Create verification record
-        </button>
-        <a class="govuk-link" href="#">Cancel</a>
+        {{ govukButton({
+          text: "Create verification record",
+          href:"ar-verification-confirmation"
+        }) }}
+        <a class="govuk-link" href="admin-dashboard">Cancel</a>
+     
       </div>
-  
     </div>
   </div>
   
