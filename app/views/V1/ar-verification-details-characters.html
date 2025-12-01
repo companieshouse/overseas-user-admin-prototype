@@ -129,8 +129,10 @@ Date verification completed
           Full name
         </label>
       </h1>
-      <div id="event-name-hint" class="govuk-hint">
-        Enter the name as shown on first identity document.
+      
+
+      <div class="govuk-inset-text">
+        Enter the name as shown on first identity document
       </div>
     </div>
   
@@ -138,7 +140,9 @@ Date verification completed
       <label class="govuk-label" for="full-name">
         First name or names (if provided)
       </label>
-    
+      <div id="event-name-hint" class="govuk-hint">
+        Entry must be less than 100 characters
+      </div>
       <input class="govuk-input" id="full-name" name="fullName" type="text" spellcheck="false" autocomplete="name">
     </div>
   
@@ -146,6 +150,9 @@ Date verification completed
       <label class="govuk-label" for="full-name">
         Last name (if provided)
       </label>
+      <div id="event-name-hint" class="govuk-hint">
+        Entry must be less than 160 characters
+      </div>
       <input class="govuk-input" id="full-name" name="fullName" type="text" spellcheck="false" autocomplete="name">
     </div>
   
@@ -207,12 +214,18 @@ Date verification completed
       <label class="govuk-label" for="address-line-1">
         Address line 1
       </label>
+      <div id="event-name-hint" class="govuk-hint">
+        Entry must be less than 30 characters
+      </div>
       <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
     </div>
     <div class="govuk-form-group">
       <label class="govuk-label" for="address-line-1">
         Address line 2 (if provided)
       </label>
+      <div id="event-name-hint" class="govuk-hint">
+        Entry must be less than 110 characters
+      </div>
       <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
     </div>
   
@@ -220,6 +233,9 @@ Date verification completed
       <label class="govuk-label" for="address-town">
         Town or city (if provided)
       </label>
+      <div id="event-name-hint" class="govuk-hint">
+        Entry must be less than 35 characters
+      </div>
       <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2">
     </div>
     <div class="govuk-form-group">
