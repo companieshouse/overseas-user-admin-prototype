@@ -7,13 +7,32 @@
 
     
 <a href="ar-verification-search.html" class="govuk-back-link">Back</a>
-
-
+<div class="govuk-error-summary" data-module="govuk-error-summary">
+  <div role="alert">
+    <h2 class="govuk-error-summary__title">
+      There is a problem
+    </h2>
+    <div class="govuk-error-summary__body">
+      <ul class="govuk-list govuk-error-summary__list">
+        <li>
+          <a href="#">First name must not be over 100 characters</a>
+        </li>
+      
+      </ul>
+    </div>
+  </div>
+</div>
 <div class="govuk-form-group">
     <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">Enter identity verification record details</h1>
   </div>
   </div>
+
+
+  
+  <div>
+  <dl class="govuk-summary-list govuk-!-margin-bottom-5">
+
 
 
   
@@ -134,13 +153,21 @@ Date verification completed
       </div>
     </div>
   
-    <div class="govuk-form-group">
+  
+    <div class="govuk-form-group govuk-form-group--error">
       <label class="govuk-label" for="full-name">
         First name or names (if provided)
       </label>
-    
-      <input class="govuk-input" id="full-name" name="fullName" type="text" spellcheck="false" autocomplete="name">
+      <div id="event-name-hint" class="govuk-hint">
+        Entry must be less than 100 characters
+      </div>
+      <p id="name-error" class="govuk-error-message">
+        <span class="govuk-visually-hidden">Error:</span>First name must not be over 100 characters
+      </p>
+      <input class="govuk-input govuk-input--error" id="full-name" name="fullName" type="text" spellcheck="false" autocomplete="name">
     </div>
+
+    
   
     <div class="govuk-form-group">
       <label class="govuk-label" for="full-name">
@@ -464,7 +491,7 @@ Date verification completed
   
     
       </form>
-      <div class="govuk-!-padding-bottom-5"></div>
+      <div class="govuk-!-padding-bottom-6"></div>
   
   
     
