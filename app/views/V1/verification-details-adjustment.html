@@ -59,7 +59,7 @@
   
     <div class="govuk-form-group">
       <label class="govuk-label" for="last-name">
-        Last name (if provided)
+        Last name 
       </label>
       <input class="govuk-input" id="last-name" name="lastName" type="text" spellcheck="false" autocomplete="name">
     </div>
@@ -189,6 +189,81 @@
     <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
   </div>
 </fieldset>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">  
+
+
+ <div class="govuk-form-group">
+        <h2 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="nationalityOne">
+            Nationality
+          </label>
+        </h2>
+        <div id="nationalityOne-hint" class="govuk-hint">
+          Select a nationality from the dropdown below.
+        </div>
+        <div class="govuk-form-group">
+          <select class="govuk-select" id="nationalityOne" name="nationalityOne" aria-describedby="nationalityOne-hint">
+            <option value="choose" selected>Choose nationality
+            </option>
+            <option value="German">German</option>
+            <option value="Hungarian">Hungarian</option>
+            <option value="Icelandic">Icelandic</option>
+            <option value="Indian">Indian</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Pakistani">Pakistani</option>
+            <option value="South African">South African</option>
+          </select>
+        </div>
+       
+      </div>
+
+    
+
+      <div class="govuk-form-group" id="nationalityTwoAutocomplete">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="nationalityTwo">
+            Second nationality (if relevant)
+          </label>
+          <div id="nationalityTwo-hint" class="govuk-hint">
+            Dual citizenship (also known as dual nationality) is allowed in some countries. This means you can be a citizen of 2 countries at the same time.
+          </div>
+          <select class="govuk-select" id="nationalityTwo" name="nationalityTwo" aria-describedby="nationalityTwo-hint">
+            <option value="choose" selected>Choose nationality
+            </option>
+            <option value="German">German</option>
+            <option value="Hungarian">Hungarian</option>
+            <option value="Icelandic">Icelandic</option>
+            <option value="Indian">Indian</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Pakistani">Pakistani</option>
+            <option value="South African">South African</option>
+          </select>
+        </div>
+
+        
+
+        <div class="govuk-form-group" id="nationalityThreeAutocomplete">
+          <label class="govuk-label" for="nationalityThree">
+            Third nationality (if relevant)
+          </label>
+          <div id="nationalityThree-hint" class="govuk-hint">
+            Multiple citizenship (also known as multiple nationality) is allowed in some countries. This means you can be a citizen of 3 countries at the same time.
+          </div>
+          <select class="govuk-select" id="nationalityThree" name="nationalityThree" aria-describedby="nationalityThree-hint">
+            <option value="choose" selected>Choose nationality
+            </option>
+            <option value="German">German</option>
+            <option value="Hungarian">Hungarian</option>
+            <option value="Icelandic">Icelandic</option>
+            <option value="Indian">Indian</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Pakistani">Pakistani</option>
+            <option value="South African">South African</option>
+          </select>
+        </div>
+      </div>
+
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">  
 
@@ -343,15 +418,131 @@
     </select>
   </div>
 
+  <div class="govuk-!-padding-bottom-6"></div>
+
+<h3 class="govuk-heading-m">Third identity document (if provided) </h3>
+
+ 
+
+<div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+     <strong>Type of document</strong> 
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="published"></option>
+      <option value="updated" selected>Choose document</option>
+      <option value="views">Passport</option>
+       <option value="comments">Driving licence</option>
+      <option value="comments">National identity card</option>
+    </select>
+  </div>
+  
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="width-20">
+     <strong>Identification number</strong> 
+    </label>
+    <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
+  </div>
+  
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+   
+    
+      <label class="govuk-label govuk-!-padding-bottom-2" for="width-20">
+        <strong>Expiry date</strong>
+      </label>
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  </div>
+   <div class="govuk-grid-column-two-thirds">
+  
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+    <strong>Country of issue</strong>  
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="published"></option>
+      <option value="updated" selected>Choose country</option>
+      <option value="views">Bolivia</option>
+      <option value="comments">Brazil</option>
+    </select>
+  </div>
+
 
 
 <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> 
+
+  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h3 class="govuk-fieldset__heading">
+        Verification date
+      </h3>
+    </legend>
+    <div id="dob-hint" class="govuk-hint">
+      For example, 27 3 2024
+    </div>
+    <div class="govuk-date-input" id="verification-date">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="verification-date-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="verification-date-day" name="verification-date-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="verification-date-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="verification-date-month" name="verification-date-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="verification-date-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="verification-date-year" name="verification-date-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
 
 
     
 
         {{ govukButton({
-          text: "Continue"
+          text: "Continue",
+          href:"verification-confirmation-adjustment"
         }) }}
 
       </form>
