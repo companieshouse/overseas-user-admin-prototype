@@ -1,0 +1,362 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Enter identity verification record details
+      </h1>
+
+      <form class="form" action="/verification-details-adjustment" method="post">
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+<h2 class="govuk-heading-l">Personal details</h2>
+
+<div class="govuk-form-group">
+  <h3 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--m" for="email-address">Email address
+    </label>
+  </h3>
+  <div id="email-address-hint" class="govuk-hint">
+   Enter the user's email address.
+  </div>
+  <input class="govuk-input" id="email-address" name="emailAddress" type="text" aria-describedby="email-address-hint">
+</div>
+
+<div class="govuk-form-group">
+      <h3 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--m" for="one-half">
+          Full name
+        </label>
+      </h3>
+      <div id="first-name-hint" class="govuk-hint">
+        Enter the name as shown on first identity document.
+      </div>
+    </div>
+  
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="first-name">
+        First name or names (if provided)
+      </label>
+
+      <input class="govuk-input" id="first-name" name="firstName" type="text" spellcheck="false" autocomplete="name">
+    </div>
+  
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="last-name">
+        Last name (if provided)
+      </label>
+      <input class="govuk-input" id="last-name" name="lastName" type="text" spellcheck="false" autocomplete="name">
+    </div>
+
+    <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h3 class="govuk-fieldset__heading">
+        Date of birth
+      </h3>
+    </legend>
+    <div id="dob-hint" class="govuk-hint">
+      For example, 27 3 2024
+    </div>
+    <div class="govuk-date-input" id="dob">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="text" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+
+
+
+
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h2 class="govuk-fieldset__heading">
+      Current address
+    </h2>
+  </legend>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-1">
+      Address line 1
+    </label>
+    <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-2">
+      Address line 2 (optional)
+    </label>
+    <input class="govuk-input" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-town">
+      Town or city
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-county">
+      County (optional)
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="addressCounty" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-postcode">
+      Postcode
+    </label>
+    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+  </div>
+</fieldset>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">   
+
+
+
+
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h2 class="govuk-fieldset__heading">
+      Previous address (optional)
+    </h2>
+  </legend>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-1">
+      Address line 1
+    </label>
+    <input class="govuk-input" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-2">
+      Address line 2 (optional)
+    </label>
+    <input class="govuk-input" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-town">
+      Town or city
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-county">
+      County (optional)
+    </label>
+    <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="addressCounty" type="text">
+  </div>
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-postcode">
+      Postcode
+    </label>
+    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
+  </div>
+</fieldset>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">  
+
+<h2 class="govuk-heading-l">Verification evidence</h2>
+
+<h3 class="govuk-heading-m">First identity document</h3>
+
+ 
+
+<div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+     <strong>Type of document</strong> 
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="published"></option>
+      <option value="updated" selected>Choose document</option>
+      <option value="views">Passport</option>
+       <option value="comments">Driving licence</option>
+      <option value="comments">National identity card</option>
+    </select>
+  </div>
+  
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="width-20">
+     <strong>Identification number</strong> 
+    </label>
+    <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
+  </div>
+  
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+   
+    
+      <label class="govuk-label govuk-!-padding-bottom-2" for="width-20">
+        <strong>Expiry date</strong>
+      </label>
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  </div>
+   <div class="govuk-grid-column-two-thirds">
+  
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+    <strong>Country of issue</strong>  
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="published"></option>
+      <option value="updated" selected>Choose country</option>
+      <option value="views">Bolivia</option>
+      <option value="comments">Brazil</option>
+    </select>
+  </div>
+<div class="govuk-!-padding-bottom-6"></div>
+
+<h3 class="govuk-heading-m">Second identity document (if provided) </h3>
+
+ 
+
+<div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+     <strong>Type of document</strong> 
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="published"></option>
+      <option value="updated" selected>Choose document</option>
+      <option value="views">Passport</option>
+       <option value="comments">Driving licence</option>
+      <option value="comments">National identity card</option>
+    </select>
+  </div>
+  
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="width-20">
+     <strong>Identification number</strong> 
+    </label>
+    <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
+  </div>
+  
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+   
+    
+      <label class="govuk-label govuk-!-padding-bottom-2" for="width-20">
+        <strong>Expiry date</strong>
+      </label>
+      <div class="govuk-date-input" id="passport-issued">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+              Day
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+              Month
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" inputmode="numeric">
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+              Year
+            </label>
+            <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" inputmode="numeric">
+          </div>
+        </div>
+      </div>
+    </fieldset>
+  </div>
+  </div>
+   <div class="govuk-grid-column-two-thirds">
+  
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="sort">
+    <strong>Country of issue</strong>  
+    </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="published"></option>
+      <option value="updated" selected>Choose country</option>
+      <option value="views">Bolivia</option>
+      <option value="comments">Brazil</option>
+    </select>
+  </div>
+
+
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible"> 
+
+
+    
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
