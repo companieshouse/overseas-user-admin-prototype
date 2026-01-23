@@ -114,6 +114,18 @@
       Current address
     </h2>
   </legend>
+   <div class="govuk-form-group">
+  <label class="govuk-label" for="propertyName">
+    Property name or number (optional)
+  </label>
+
+  <div id="propertyName-hint" class="govuk-hint">
+    For example, &#39;The Mill&#39;, &#39;116&#39; or &#39;Flat 37a&#39;
+  </div>
+
+<input class="govuk-input" id="propertyName" name="propertyName" type="text" aria-describedby="propertyName-hint">
+
+</div>
   <div class="govuk-form-group">
     <label class="govuk-label" for="address-line-1">
       Address line 1
@@ -128,19 +140,34 @@
   </div>
   <div class="govuk-form-group">
     <label class="govuk-label" for="address-town">
-      Town or city
+      Town or city (optional)
     </label>
     <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2">
   </div>
   <div class="govuk-form-group">
     <label class="govuk-label" for="address-county">
-      County (optional)
+      County, state, province or region (optional)
     </label>
     <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="addressCounty" type="text">
   </div>
   <div class="govuk-form-group">
+  <label class="govuk-label" for="location">
+    Country
+  </label>
+  <div id="location-hint" class="govuk-hint">
+    Select country from the dropdown below
+  </div>
+  <select class="govuk-select" id="location" name="location" aria-describedby="location-hint">
+    <option value="choose" selected>Choose country</option>
+    <option value="eastmidlands">Algeria</option>
+    <option value="eastofengland">Brazil</option>
+    <option value="london">Columbia</option>
+    <option value="northeast">United States of America</option>
+   </select>
+</div>
+  <div class="govuk-form-group">
     <label class="govuk-label" for="address-postcode">
-      Postcode
+      Postcode or ZIP (optional)
     </label>
     <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
   </div>
@@ -157,6 +184,18 @@
       Previous address (optional)
     </h2>
   </legend>
+   <div class="govuk-form-group">
+  <label class="govuk-label" for="propertyName">
+    Property name or number (optional)
+  </label>
+
+  <div id="propertyName-hint" class="govuk-hint">
+    For example, &#39;The Mill&#39;, &#39;116&#39; or &#39;Flat 37a&#39;
+  </div>
+
+<input class="govuk-input" id="propertyName" name="propertyName" type="text" aria-describedby="propertyName-hint">
+
+</div>
   <div class="govuk-form-group">
     <label class="govuk-label" for="address-line-1">
       Address line 1
@@ -171,19 +210,34 @@
   </div>
   <div class="govuk-form-group">
     <label class="govuk-label" for="address-town">
-      Town or city
+      Town or city (optional)
     </label>
     <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="addressTown" type="text" autocomplete="address-level2">
   </div>
   <div class="govuk-form-group">
     <label class="govuk-label" for="address-county">
-      County (optional)
+      County, state, province or region (optional)
     </label>
     <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="addressCounty" type="text">
   </div>
   <div class="govuk-form-group">
+  <label class="govuk-label" for="location">
+    Country
+  </label>
+  <div id="location-hint" class="govuk-hint">
+    Select country from the dropdown below
+  </div>
+  <select class="govuk-select" id="location" name="location" aria-describedby="location-hint">
+    <option value="choose" selected>Choose country</option>
+    <option value="eastmidlands">Algeria</option>
+    <option value="eastofengland">Brazil</option>
+    <option value="london">Columbia</option>
+    <option value="northeast">United States of America</option>
+   </select>
+</div>
+  <div class="govuk-form-group">
     <label class="govuk-label" for="address-postcode">
-      Postcode
+      Postcode or ZIP (optional)
     </label>
     <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
   </div>
