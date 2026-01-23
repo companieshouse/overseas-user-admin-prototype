@@ -33,7 +33,6 @@
     </label>
   </h3>
   <div id="email-address-hint" class="govuk-hint">
-   Enter the user's email address.
   </div>
   <input class="govuk-input" id="email-address" name="emailAddress" type="text" aria-describedby="email-address-hint">
 </div>
@@ -66,13 +65,13 @@
 
     <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
       <h3 class="govuk-fieldset__heading">
         Date of birth
       </h3>
     </legend>
     <div id="dob-hint" class="govuk-hint">
-      For example, 27 3 2024
+      For example, 27 3 1995
     </div>
     <div class="govuk-date-input" id="dob">
       <div class="govuk-date-input__item">
@@ -110,7 +109,7 @@
 
 
 <fieldset class="govuk-fieldset">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
     <h2 class="govuk-fieldset__heading">
       Current address
     </h2>
@@ -153,7 +152,7 @@
 
 
 <fieldset class="govuk-fieldset">
-  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
     <h2 class="govuk-fieldset__heading">
       Previous address (optional)
     </h2>
@@ -199,9 +198,6 @@
             Nationality
           </label>
         </h2>
-        <div id="nationalityOne-hint" class="govuk-hint">
-          Select a nationality from the dropdown below.
-        </div>
         <div class="govuk-form-group">
           <select class="govuk-select" id="nationalityOne" name="nationalityOne" aria-describedby="nationalityOne-hint">
             <option value="choose" selected>Choose nationality
@@ -358,6 +354,12 @@
       <option value="views">Passport</option>
        <option value="comments">Driving licence</option>
       <option value="comments">National identity card</option>
+      <option value="views">Birth or adoption certificate</option>
+      <option value="views">Marriage or civil partnership certificate</option>
+      <option value="views">Immigration document</option>
+      <option value="views">Bank or building society statement</option>
+      <option value="views">Mortgage statement or rental agreement</option>
+      <option value="views">Utility bill</option>
     </select>
   </div>
   
@@ -431,9 +433,13 @@
     <select class="govuk-select" id="sort" name="sort">
       <option value="published"></option>
       <option value="updated" selected>Choose document</option>
-      <option value="views">Passport</option>
-       <option value="comments">Driving licence</option>
-      <option value="comments">National identity card</option>
+         <option value="views">Mortgage statement or rental agreement</option>
+      <option value="views">Utility bill</option>
+      <option value="views">Bank or building society statement</option>
+      <option value="views">Insurance policy document</option>
+      <option value="views">Health record</option>
+      <option value="views">Employment record</option>
+      <option value="views">Education or official qualification record</option>
     </select>
   </div>
   
@@ -506,7 +512,6 @@
       </h3>
     </legend>
     <div id="dob-hint" class="govuk-hint">
-      For example, 27 3 2024
     </div>
     <div class="govuk-date-input" id="verification-date">
       <div class="govuk-date-input__item">
