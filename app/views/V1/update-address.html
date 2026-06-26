@@ -1,0 +1,43 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="AR123456" %}
+
+{% block beforeContent %}
+  {% include "/includes/back-link.html" %}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+
+
+    
+
+
+
+         
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="event-name">
+      What is the new current home address?
+    </label>
+  </h1>
+  <div id="event-name-hint" class="govuk-hint">
+    Include the number or name, street, town or city, and country. Also include the postcode (or equivalent) if you have one.
+  </div>
+  <textarea class="govuk-textarea" id="address" name="address" rows="5" autocomplete="street-address"></textarea>
+</div>
+
+   
+    <div class="govuk-button-group">
+      {{ govukButton({
+        text: "Update",
+        href:"user-record"
+      }) }}
+    
+      <a class="govuk-link" href="user-record.html">Cancel</a>
+
+    </div>
+{% endblock %}
